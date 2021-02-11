@@ -12,15 +12,17 @@ function mySearchFunction() {
     let title = item[i];
     let newTitle = title.innerHTML.toLowerCase();
     
+    // Allows you to reset the display of the training offered.
     if (!filter){
       let parent = $(title).parent().parent();
       $(parent).css("display", "flex")
     }
-    
+    // hides training that does not meet the search criteria.
     if (!newTitle.includes(filter)){
       let parent = $(title).parent().parent();
       $(parent).css("display", "none")
       
+    // Acts the same as the first "if" but serves as security.  
     } else {
       let parent = $(title).parent().parent();
       $(parent).css("display", "flex")
