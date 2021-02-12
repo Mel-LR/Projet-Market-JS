@@ -82,6 +82,62 @@ header .submenu:hover #cart::-webkit-scrollbar-track {background: #f1f1f1;}
 header .submenu:hover #cart::-webkit-scrollbar-thumb {background: #888;}
 header .submenu:hover #cart::-webkit-scrollbar-thumb:hover {background: #555;}
 
+/* 
+* DarkMode
+*/
+ .dark-mode {
+  background-color: rgb(36, 36, 36);
+  color: white;
+  font-family: 'Jost', sans-serif;
+  border-radius: 5px;
+}
+
+header .switch{
+position: relative;
+top: 30%;
+width: 1%;
+left: 300%;
+}
+
+header .button1 {
+display: inline-block;
+border-radius: 4px;
+background: linear-gradient(rgba(128, 128, 128, 0),rgba(128, 128, 128, 0));
+border: none;
+color: black;
+text-align: center;
+font-size:28px;
+transition: all 0.5s;
+cursor: pointer;
+width: 25px;
+margin-top: 15px;
+}
+
+header .button1 span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+}
+
+header .button1 span:after {
+content: '\00bb';
+position: absolute;
+opacity: 0;
+top: 0;
+right: -20px;
+transition: 0.5s;
+}
+
+header .button1:hover span {
+padding-right: 25px;
+}
+
+header .button1:hover span:after {
+opacity: 1;
+right: 0;
+}
+
 /*
 * Search form
 */
@@ -271,10 +327,19 @@ header .submenu:hover #cart::-webkit-scrollbar-thumb:hover {background: #555;}
   font-size: 13px;
 }
 
-/*
-* Footer
+
+/* 
+* footer 
 */
 footer {
   display: block;
   margin-top: 50px;
+}
+
+/*
+* Barre de copyright
+*/
+.copyright {
+  text-align: center;
+  font-size: large;
 }
