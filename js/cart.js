@@ -2,6 +2,7 @@ window.onload = displayCart(getLocalStorage())
 
 let carts = document.querySelectorAll('.add-to-cart');
 
+// evenement click on add to carts
 for (let i = 0; i < carts.length; i++){
     carts[i].addEventListener('click', () => {
         alert('Click on "ok" if you want to add the article')
@@ -15,6 +16,7 @@ for (let i = 0; i < carts.length; i++){
     }) 
 }
 
+// function creation of an article object
 function getArticle(button){
     
     let parent = button.parentNode
@@ -33,6 +35,7 @@ function getArticle(button){
     return article
 }
 
+// creation of a local storage array
 function getLocalStorage(){
     if(localStorage.getItem('cartNumbers')){
         table = JSON.parse(localStorage.getItem('cartNumbers'))
@@ -53,7 +56,7 @@ function onLoadCartNumbers(){
     }
 }
 
-
+// creation of the product number (index of each product)
 function cartNumbers(product){
 
     let productNumbers = localStorage.getItem('cartNumbers');
@@ -72,7 +75,7 @@ function cartNumbers(product){
     setItems(product);
 
 }
-
+//adding products to local storage
 function setItems(product){
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
@@ -106,6 +109,7 @@ function totalCost(product) {
     }
 }
 
+// function written in the html of the shopping cart
 function displayCart(storage){
     let productContainer = $("#tbody");
     

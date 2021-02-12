@@ -26,6 +26,7 @@ function getArticle(button){
     return article
 }
 
+// fonction suprimer un article
 function deleteArticle(){
     let deleteBtn = document.querySelectorAll('.deleteBtn');
         for (let i = 0; i < deleteBtn.length; i++){
@@ -39,6 +40,7 @@ function deleteArticle(){
     }
 }
 
+// vider le panier
 function emptyCart(){
     let empty = []
     localStorage.setItem("cartNumbers", JSON.stringify(empty))
